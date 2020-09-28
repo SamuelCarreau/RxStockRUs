@@ -20,7 +20,6 @@ namespace StocksRUs
 
         private void OnStockTick(object sender, StockTick stockTick)
         {
-            Debug.WriteLine("{0}: {1}", stockTick.QuoteSymbol, stockTick.Price);
             var quoteSymbol = stockTick.QuoteSymbol;
             lock (_stockTickLocker)
             {
